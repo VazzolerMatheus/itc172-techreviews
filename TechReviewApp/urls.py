@@ -13,7 +13,9 @@ urlpatterns=[
     
     path('getTypes/', views.getTypes, name='types'),
 
-    path('getProducts/', views.getProducts, name='products')
+    path('getProducts/', views.getProducts, name='products'),
+
+    path('newProduct/', views.newProduct, name='newProduct')
 
     
 ]
