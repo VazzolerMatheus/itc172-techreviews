@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<h2>Login</h2>
+
+	<form method="POST"> 
+		<!-- check this later -->
+		{% csrf_token %}
+
+
+		<!-- build in class form -->
+		{{ form.as_p }}
+
+		<button type="submit">login</button>
+
+	</form>
+
+
+{% endblock %}

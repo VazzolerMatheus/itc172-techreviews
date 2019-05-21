@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from .models import TechType, Product, Review
 from .forms import ProductForm
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 
 
@@ -39,6 +41,8 @@ def productsDetail(request, id):
 
     return render (request, 'TechReviewApp/productdetail.html', context=context)
 
+    
+@login_required
 def newProduct(request):
     form = ProductForm
                         #check difference between POST and GET
@@ -55,4 +59,13 @@ def newProduct(request):
 
     return render(request, 'TechReviewApp/newproduct.html', {'form' : form})
 
+
+def loginMessage(request):
+
+    return render(request, 'TechReviewApp/loginMessage.html')
+
+
+def logoutMessage(request):
+
+    return render(request, 'TechReviewApp/logoutMessage')
 

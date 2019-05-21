@@ -122,4 +122,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+
+#this it the static folder, everything that is static goes here.
 STATIC_URL = '/static/'
+
+#LOGIN_DIRECT_URL and LOGOUT_DIRECT_URL are built-in Django constants   
+LOGIN_REDIRECT_URL = 'loginMessage'
+LOGOUT_REDIRECT_URL = 'logoutMessage'
+

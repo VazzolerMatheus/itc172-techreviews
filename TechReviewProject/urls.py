@@ -21,4 +21,8 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('TechReviewApp/', include('TechReviewApp.urls')),
+
+
+    #urls for the users to access.
+    path('accounts/', include('django.contrib.auth.urls')),
 ]

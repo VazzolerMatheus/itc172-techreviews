@@ -15,7 +15,11 @@ urlpatterns=[
 
     path('getProducts/', views.getProducts, name='products'),
 
-    path('newProduct/', views.newProduct, name='newProduct')
+    path('newProduct/', views.newProduct, name='newProduct'),
+
+    path('loginMessage/', views.loginMessage, name='loginMessage'),
+
+    path('logoutMessage/', views.loginMessage, name='logoutMessage'),
 
     
 ]
